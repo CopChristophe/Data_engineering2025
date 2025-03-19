@@ -1,0 +1,24 @@
+[2025-03-19T13:34:58.946+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-03-19T13:34:58.961+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: web_scraping_dag.save_data manual__2025-03-19T13:34:50.760529+00:00 [queued]>
+[2025-03-19T13:34:58.970+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: web_scraping_dag.save_data manual__2025-03-19T13:34:50.760529+00:00 [queued]>
+[2025-03-19T13:34:58.970+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 5
+[2025-03-19T13:34:58.982+0000] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): save_data> on 2025-03-19 13:34:50.760529+00:00
+[2025-03-19T13:34:58.987+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'web_scraping_dag', 'save_data', 'manual__2025-03-19T13:34:50.760529+00:00', '--job-id', '26', '--raw', '--subdir', 'DAGS_FOLDER/Website2mongo.py', '--cfg-path', '/tmp/tmp8lig53st']
+[2025-03-19T13:34:58.989+0000] {standard_task_runner.py:105} INFO - Job 26: Subtask save_data
+[2025-03-19T13:34:58.989+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=536) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-03-19T13:34:58.990+0000] {standard_task_runner.py:72} INFO - Started process 537 to run task
+[2025-03-19T13:34:59.026+0000] {task_command.py:467} INFO - Running <TaskInstance: web_scraping_dag.save_data manual__2025-03-19T13:34:50.760529+00:00 [running]> on host f8578d95b82a
+[2025-03-19T13:34:59.089+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='web_scraping_dag' AIRFLOW_CTX_TASK_ID='save_data' AIRFLOW_CTX_EXECUTION_DATE='2025-03-19T13:34:50.760529+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-19T13:34:50.760529+00:00'
+[2025-03-19T13:34:59.090+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-03-19T13:34:59.159+0000] {logging_mixin.py:190} INFO - Data from https://dbpedia.org/class/yago/WikicatLogicalFallacies saved to MongoDB with ID: 67dac80334ef2b56dd9922bc
+[2025-03-19T13:34:59.162+0000] {logging_mixin.py:190} INFO - Data from https://en.wikipedia.org/wiki/List_of_fallacies saved to MongoDB with ID: 67dac80334ef2b56dd9922bd
+[2025-03-19T13:34:59.166+0000] {logging_mixin.py:190} INFO - Data from https://en.wikipedia.org/wiki/List_of_cognitive_biases saved to MongoDB with ID: 67dac80334ef2b56dd9922be
+[2025-03-19T13:34:59.167+0000] {logging_mixin.py:190} INFO - Data from https://www.wikidata.org/wiki/Q2607828 saved to MongoDB with ID: 67dac80334ef2b56dd9922bf
+[2025-03-19T13:34:59.168+0000] {logging_mixin.py:190} INFO - Data from https://simple.wikipedia.org/wiki/Category:Logical_fallacies saved to MongoDB with ID: 67dac80334ef2b56dd9922c0
+[2025-03-19T13:34:59.178+0000] {logging_mixin.py:190} INFO - All data have been saved to MongoDB.
+[2025-03-19T13:34:59.179+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-03-19T13:34:59.280+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-03-19T13:34:59.281+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=web_scraping_dag, task_id=save_data, run_id=manual__2025-03-19T13:34:50.760529+00:00, execution_date=20250319T133450, start_date=20250319T133458, end_date=20250319T133459
+[2025-03-19T13:34:59.326+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-03-19T13:34:59.345+0000] {taskinstance.py:3901} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-03-19T13:34:59.347+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

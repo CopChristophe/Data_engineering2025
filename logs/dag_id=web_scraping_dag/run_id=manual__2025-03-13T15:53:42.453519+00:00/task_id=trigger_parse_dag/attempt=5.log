@@ -1,0 +1,20 @@
+[2025-03-13T16:38:36.152+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-03-13T16:38:36.167+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: web_scraping_dag.trigger_parse_dag manual__2025-03-13T15:53:42.453519+00:00 [queued]>
+[2025-03-13T16:38:36.174+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: web_scraping_dag.trigger_parse_dag manual__2025-03-13T15:53:42.453519+00:00 [queued]>
+[2025-03-13T16:38:36.175+0000] {taskinstance.py:2867} INFO - Starting attempt 5 of 5
+[2025-03-13T16:38:36.185+0000] {taskinstance.py:2890} INFO - Executing <Task(TriggerDagRunOperator): trigger_parse_dag> on 2025-03-13 15:53:42.453519+00:00
+[2025-03-13T16:38:36.191+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=8651) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-03-13T16:38:36.192+0000] {standard_task_runner.py:72} INFO - Started process 8652 to run task
+[2025-03-13T16:38:36.191+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'web_scraping_dag', 'trigger_parse_dag', 'manual__2025-03-13T15:53:42.453519+00:00', '--job-id', '216', '--raw', '--subdir', 'DAGS_FOLDER/Website2mongo.py', '--cfg-path', '/tmp/tmptkwkd070']
+[2025-03-13T16:38:36.193+0000] {standard_task_runner.py:105} INFO - Job 216: Subtask trigger_parse_dag
+[2025-03-13T16:38:36.229+0000] {task_command.py:467} INFO - Running <TaskInstance: web_scraping_dag.trigger_parse_dag manual__2025-03-13T15:53:42.453519+00:00 [running]> on host 40f8d416e5ba
+[2025-03-13T16:38:36.293+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='web_scraping_dag' AIRFLOW_CTX_TASK_ID='trigger_parse_dag' AIRFLOW_CTX_EXECUTION_DATE='2025-03-13T15:53:42.453519+00:00' AIRFLOW_CTX_TRY_NUMBER='5' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-13T15:53:42.453519+00:00'
+[2025-03-13T16:38:36.294+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-03-13T16:38:39.189+0000] {trigger_dagrun.py:257} INFO - Waiting for parse_mongo_to_sql_dag on 2025-03-13 16:38:36.310183+00:00 to become allowed state ['success'] ...
+[2025-03-13T16:39:44.657+0000] {trigger_dagrun.py:257} INFO - Waiting for parse_mongo_to_sql_dag on 2025-03-13 16:38:36.310183+00:00 to become allowed state ['success'] ...
+[2025-03-13T16:40:50.134+0000] {trigger_dagrun.py:271} INFO - parse_mongo_to_sql_dag finished with allowed state success
+[2025-03-13T16:40:50.143+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-03-13T16:40:50.144+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=web_scraping_dag, task_id=trigger_parse_dag, run_id=manual__2025-03-13T15:53:42.453519+00:00, execution_date=20250313T155342, start_date=20250313T163836, end_date=20250313T164050
+[2025-03-13T16:40:50.201+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-03-13T16:40:50.219+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-03-13T16:40:50.222+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
